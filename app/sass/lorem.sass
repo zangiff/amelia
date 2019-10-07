@@ -1,0 +1,167 @@
+@import "vars"
+@import "header"
+
+.cover
+  display: block
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  width: 220px
+  @media screen and(max-width: 600px)
+    display: none
+
+.links
+  &__wrap
+    font-size: 15px
+    a
+      border-bottom: 1px solid $accent
+      color: $accent
+      margin-right: 20px
+    span
+      color: #999
+
+.lorem
+  &__wrap
+    padding-top: 30px
+    display: grid
+    grid-template-columns: 1fr 3fr
+    grid-column-gap: 20px
+    @media only screen and(max-width: 905px)
+      display: block
+      text-align: center
+  &__img
+    position: relative
+    @media only screen and(max-width: 905px)
+      padding-bottom: 30px
+    &:hover
+      &::after
+        display: block
+        @media only screen and(max-width: 905px)
+          display: none
+    &::after
+      content: ""
+      width: 220px
+      height: 210px
+      background: url("../img/blog/articles-list-woman-cover.jpg")
+      z-index: 2
+      position: absolute
+      top: 0
+      left: 0
+      display: none
+      animation-name: fadeIn
+      animation-duration: 1s
+      animation-fill-mode: both
+  &__content
+    font-size: 15px
+    line-height: 20px
+
+.headers
+  padding-top: 30px
+  &__titles
+    font-weight: 500
+    @media only screen and(max-width: 346px)
+      text-align: center
+    h1
+      font-size: 30px
+      padding-bottom: 10px
+    h2
+      font-size: 24px
+      padding-bottom: 10px
+    h3
+      font-size: 18px
+      padding-bottom: 10px
+  &__app
+    padding: 10px 0 30px
+  &__list
+    padding-left: 30px
+    list-style: disc
+    color: $accent
+  &__item
+    font-size: 15px
+    line-height: 20px
+    padding-bottom: 10px
+    span
+      color: $main-text-color
+  &__links
+    padding-bottom: 40px
+    a
+      font-size: 15px
+      line-height: 20px
+      margin-right: 20px
+      border-bottom: 1px solid transparent
+      @media only screen and(max-width: 494px)
+        display: block
+        text-align: center
+        border: none
+        text-decoration: underline
+        padding-bottom: 20px
+    &-active
+      color: #f33 !important
+      border-bottom-color: #f66 !important
+    &-hover
+      color: #c33 !important
+      border-bottom-color: #c33 !important
+    &-visited
+      color: #f99 !important
+      border-bottom-color: #f99 !important
+
+.table
+  &__wrap
+    padding: 0 1px 80px
+    @media only screen and(max-width: 600px)
+      padding-bottom: 20px
+  &__container
+    font-size: 16px
+    border-collapse: collapse
+    text-align: center
+    width: 100%
+    font-weight: 300
+    @media only screen and(max-width: 797px)
+      font-size: 12px
+    @media only screen and(max-width: 632px)
+      font-size: 10px
+    @media only screen and(max-width: 550px)
+      font-size: 8px
+  th, td
+    border-right: 1px solid #f99
+    width: 16%
+    @media only screen and(max-width: 470px)
+      &:nth-child(2)
+        display: none
+    @media only screen and(max-width: 393px)
+      &:nth-child(3)
+        display: none
+    &:first-child
+      width: 52%
+      text-align: left
+      padding-left: 15px
+      @media only screen and(max-width: 632px)
+        font-size: 12px
+      @media only screen and(max-width: 550px)
+        padding-left: 5px
+        font-size: 12px
+  th
+    background: #f33
+    color: white
+    text-transform: uppercase
+    font-weight: 300
+    line-height: 60px
+    @media only screen and(max-width: 797px)
+      line-height: 30px
+    @media only screen and(max-width: 550px)
+      line-height: 16px
+  td
+    line-height: 40px
+    @media only screen and(max-width: 797px)
+      line-height: 20px
+    @media only screen and(max-width: 550px)
+      line-height: 16px
+    &:first-child
+      border-left: 1px solid #f99
+  &__footer
+    text-transform: uppercase
+    tr
+      border-bottom: 1px solid #f99
+
+@import "footer"

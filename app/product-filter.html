@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Amelia - интернет-магазин косметики</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/07659b6a35.js" crossorigin="anonymous"></script> <!-- FontAwesome JS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- Bootstrap functionality-->
+  <link rel="stylesheet" href="./css/product-filter.min.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="header">
+      <div class="container header__container">
+        <nav class="header__nav">
+          <div class="header__menu clearfix">
+            <ul class="header__list">
+              <li class="header__list__item"><a href="./map-location.html">Мир Amelia</a></li>
+              <li class="header__list__item"><a href="./registration-form.html">Контакты</a></li>
+              <li class="header__list__item"><a href="./product-filter.html">Оплата и доставка</a></li>
+              <li class="header__list__item"><a href="#">Словарь компонентов</a></li>
+              <li class="header__list__item"><a href="#">Блог</a></li>
+            </ul>
+          </div>
+          <div class="header__bookmark">
+            <a href="#"><i class="far fa-star"></i><span>В закладки</span></a>
+          </div>
+        </nav>
+        <div class="header__main">
+          <div class="header__item-1">
+            <div class="header__img">
+              <a href="#"><img src="img/icon-tel.png" alt="phone icon"></a>
+            </div>
+            <div class="header__shedule">
+              <p class="header__worktime">Пн.-Сб.: с 8:00 до 21:00</p>
+              <a class="header__phone" href="tel:+74997555976">8 (499) 755-59-76</a>
+            </div>
+          </div>
+          <div class="header__item-2">
+            <a href="./index.html"><img src="img/header-logo.png" alt="header logo"></a>
+          </div>
+          <div class="header__item-3">
+            <div class="header__item-3-left"><a href="#"><img src="img/header-icon-1.png" alt="girl"></a></div>
+            <div class="header__item-3-center">
+              <a href="mailto:vitya008@yandex.ru">vitya008@yandex.ru</a>
+              <p>Виктор Валерьевич</p>
+            </div>
+            <div class="header__item-3-right"><a href="#"><img src="img/header-icon-2.png" alt="boy"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container main-nav__container">
+        <div class="main-nav__menu">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="./card-product.html">Лицо</a></li>
+            <li class="main-nav__item"><a href="./cream-product.html">Волосы</a></li>
+            <li class="main-nav__item"><a href="./product-cart.html">Тело</a></li>
+            <li class="main-nav__item"><a href="#">Парфюмерия</a></li>
+            <li class="main-nav__item"><a href="#">Мужчинам</a></li>
+            <li class="main-nav__item"><a href="#">БАД</a></li>
+            <li class="main-nav__item"><a href="#">Детям</a></li>
+            <li class="main-nav__item"><a href="#">Для дома</a></li>
+            <li class="main-nav__item"><a href="#">Подарки</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main id="main">
+      <section class="links">
+        <div class="container">
+          <div class="links__wrap">
+            <a href="./index.html">Главная</a>
+            <span>Товары</span>
+          </div>
+        </div>
+      </section>
+      <section class="product">
+        <div class="container">
+          <div class="product__wrap">
+            <div class="product__header">
+              <div class="product__img"><img class="product__img-main" src="img/filter-main.jpg" alt="nature"><img class="product__img-cover" src="img/filter-cover.jpg" alt="woman"></div>
+              <div class="product__desc">
+                <h1 class="product__title">Ангелика</h1>
+                <p class="product__text">
+                  Ангелика – это удивительное растение, которое невероятно быстро растет благодаря способности находить воду.
+                  L'OCCITANE посвятила этому потрясающему растению целую линию средств для лица, которые интенсивно увлажняют
+                  и наполняют кожу энергией. В нашей коллекции средств для лица использованы эфирное масло и цветочная вода ангелики, помогающие восстановить естественную красоту кожи.
+                </p>
+                <p class="product__align">
+                  <a href="#" class="product__more">Полное описание</a>
+                </p>
+              </div>
+            </div>
+            <div class="product__filter">
+              <h2 class="product__filter__title">Выбор по параметрам:</h2>
+              <div class="product__filter__wrap">
+                <form action="/" name="product-filter-form" id="product-filter-form" method="POST" class="product__filter__form">
+                  <fieldset>
+                    <div class="product__filter__wrap-grid">
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Сертификаты товара:</h4>
+                        <select name="product-filter-select-1" id="product-filter-select-1" class="product__filter__select">
+                          <option selected value="Ромашка">Сертификат 1</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Для приема в ванной:</h4>
+                        <select name="product-filter-select-2" id="product-filter-select-2" class="product__filter__select">
+                          <option selected value="Ромашка">Масла</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Производитель:</h4>
+                        <select name="product-filter-select-3" id="product-filter-select-3" class="product__filter__select">
+                          <option selected value="Ромашка">Dr. Hauschka</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Тонизирование:</h4>
+                        <select name="product-filter-select-4" id="product-filter-select-4" class="product__filter__select">
+                          <option selected value="Ромашка">Гидрозоли</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Антицеллюлитная терапия:</h4>
+                        <select name="product-filter-select-5" id="product-filter-select-5" class="product__filter__select">
+                          <option selected value="Ромашка">Обертывание, маски</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Ароматерапия:</h4>
+                        <select name="product-filter-select-6" id="product-filter-select-6" class="product__filter__select">
+                          <option selected value="Ромашка">Эфирные масла</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Руки и Ногти:</h4>
+                        <select name="product-filter-select-7" id="product-filter-select-7" class="product__filter__select">
+                          <option selected value="Ромашка">Кремы</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Фиксация:</h4>
+                        <select name="product-filter-select-8" id="product-filter-select-8" class="product__filter__select">
+                          <option selected value="Ромашка">Мягкая фиксация</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title">Ноги:</h4>
+                        <select name="product-filter-select-9" id="product-filter-select-9" class="product__filter__select">
+                          <option selected value="Ромашка">Профилактика грибка</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                      <div class="product__filter__form__selectwrapper">
+                        <h4 class="product__filter__form__selectwrapper__title product__filter__form__selectwrapper__title-last">Сортировать:</h4>
+                        <select name="product-filter-select-10" id="product-filter-select-10" class="product__filter__select">
+                          <option selected value="Ромашка">По новизне</option>
+                          <option value="Зверобой">Зверобой</option>
+                          <option value="Крапива">Крапива</option>
+                          <option value="Чистотел">Чистотел</option>
+                          <option value="Одуванчик">Одуванчик</option>
+                          <option value="Боярышник">Боярышник</option>
+                          <option value="Черемуха">Черемуха</option>
+                          <option value="Ангелика">Ангелика</option>
+                        </select>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <div class="product__filter__controls">
+                      <button class="button product__filter__button product__filter__button-submit" type="submit">Показать</button>
+                      <button class="button product__filter__button product__filter__button-reset" type="reset">Сбросить</button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="product__item">
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+              <div class="product__item__wrap">
+                <div class="product__item__discount">
+                  <span>-5%</span>
+                </div>
+                <div class="product__item__img"><img src="img/filter-pot.jpg" alt="pot"></div>
+                <div class="product__item__content">
+                  <p class="product__item__content__desc">Очищающий крем для лица</p>
+                  <p class="product__item__content__price">
+                    <span class="product__item__content__price-fullprice">240	&#8381; </span>
+                    <span class="product__item__content__price-discount">228 &#8381;</span>
+                  </p>
+                </div>
+                <div class="product__item__controls">
+                  <button class="button product__item__button" type="button">Купить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--====================-->
+      <section class="address">
+        <div class="container address__container">
+          <div class="address__wrap">
+            <div class="address__logo"><img src="img/address-logo.png" alt="logo"></div>
+            <div class="address__paragraph">
+              <p><span>Магазин натуральной косметики и селективной парфюмерии</span>(оффлайн-магазин открыт ежедневно с 10 до 21)</p>
+            </div>
+            <div class="address__icon"><img src="img/address-icon.png" alt="home"></div>
+            <div class="address__data">
+              <p>Москва, Яблочкова улица, дом 21А<br>ТЦ &#171;Тимирязевский&#187;, 1 этаж
+                <a href="tel:+74997555976">8 (499) 755-59-76</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__wrap">
+          <div class="footer__address">
+            <span>г. Москва, ул. Яблочкова, д. 21а</span>
+            <span>ТЦ "Тимирязевский", 1 этаж</span>
+            <span><a href="tel:+74997555976">8 (499) 755-59-76</a></span>
+          </div>
+          <div class="footer__center">
+            <div class="footer__center__social">
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-vk"></i></div>
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-facebook-f"></i></div>
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-instagram"></i></div>
+            </div>
+            <div class="footer__center__copyright">
+              <span>Все права защищены законами РФ</span>
+              <span>© www.amelia.ru, 2009 - 2019</span>
+            </div>
+          </div>
+          <div class="footer__about">
+            <a href="#">О магазине</a>
+            <a href="#">Обратная связь</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script> <!--Popper JS-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> <!-- Bootstrap functionality-->
+  <script src="./js/product-filter.js"></script>
+</body>
+</html>

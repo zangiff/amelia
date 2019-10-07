@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Amelia - интернет-магазин косметикиt</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/07659b6a35.js" crossorigin="anonymous"></script> <!-- FontAwesome JS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- Bootstrap functionality-->
+  <link rel="stylesheet" href="./css/order-form.min.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="header">
+      <div class="container header__container">
+        <nav class="header__nav">
+          <div class="header__menu clearfix">
+            <ul class="header__list">
+              <li class="header__list__item"><a href="./map-location.html">Мир Amelia</a></li>
+              <li class="header__list__item"><a href="./registration-form.html">Контакты</a></li>
+              <li class="header__list__item"><a href="./product-filter.html">Оплата и доставка</a></li>
+              <li class="header__list__item"><a href="./articles-list.html">Словарь компонентов</a></li>
+              <li class="header__list__item"><a href="./lorem.html">Блог</a></li>
+            </ul>
+          </div>
+          <div class="header__bookmark">
+            <a href="#"><i class="far fa-star"></i><span>В закладки</span></a>
+          </div>
+        </nav>
+        <div class="header__main">
+          <div class="header__item-1">
+            <div class="header__img">
+              <a href="#"><img src="img/icon-tel.png" alt="phone icon"></a>
+            </div>
+            <div class="header__shedule">
+              <p class="header__worktime">Пн.-Сб.: с 8:00 до 21:00</p>
+              <a class="header__phone" href="tel:+74997555976">8 (499) 755-59-76</a>
+            </div>
+          </div>
+          <div class="header__item-2">
+            <a href="./index.html"><img src="img/header-logo.png" alt="header logo"></a>
+          </div>
+          <div class="header__item-3">
+            <div class="header__item-3-left"><a href="#"><img src="img/header-icon-1.png" alt="girl"></a></div>
+            <div class="header__item-3-right"><a href="#"><img src="img/header-icon-2.png" alt="boy"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container main-nav__container">
+        <div class="main-nav__menu">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="./card-product.html">Лицо</a></li>
+            <li class="main-nav__item"><a href="./cream-product.html">Волосы</a></li>
+            <li class="main-nav__item"><a href="./product-cart.html">Тело</a></li>
+            <li class="main-nav__item"><a href="./blog.html">Парфюмерия</a></li>
+            <li class="main-nav__item"><a href="./order-form.html">Мужчинам</a></li>
+            <li class="main-nav__item"><a href="./enter.html">БАД</a></li>
+            <li class="main-nav__item"><a href="#">Детям</a></li>
+            <li class="main-nav__item"><a href="#">Для дома</a></li>
+            <li class="main-nav__item"><a href="#">Подарки</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main id="main">
+      <section class="links">
+        <div class="container">
+          <div class="links__wrap">
+            <a href="./index.html">Главная</a>
+            <a href="#">Мой кабинет</a>
+            <span>Моя корзина</span>
+          </div>
+        </div>
+      </section>
+      <section class="title">
+        <div class="container">
+          <div class="title__wrap">
+            <h1 class="title__header">Оформление заказа</h1>
+            <p class="title__desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat porttitor enim eget finibus. Integer tempor tristique sem non blandit. Duis consectetur lobortis ligula, ut luctus elit vestibulum et. Etiam sit amet felis id nibh aliquam rhoncus. Integer id efficitur lacus. Praesent laoreet, massa a ultricies efficitur, turpis sem efficitur eros, nec lacinia sem elit quis leo. Morbi sodales mi massa, nec accumsan lectus egestas sit amet. Nunc eu vehicula ex. Nullam ac ipsum vel est porttitor malesuada. Maecenas vehicula gravida iaculis. Maecenas a malesuada risus, sed aliquet ante.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="steps">
+        <div class="container">
+          <div class="steps__wrap">
+            <form action="/" name="order-form" method="POST" id="order-form">
+              <fieldset>
+                <div class="steps__item steps__item-1">
+                  <div class="steps__header">
+                    <h2 class="steps__title">Шаг 1. Заполните форму заказа</h2>
+                  </div>
+                  <div class="steps__item__inputwrapper steps__item__inputwrapper-1">
+                    <label for="client-data-name">Ф.И.О.</label>
+                    <input class="steps__item__client-data" id="client-data-name" type="text" form="order-form" maxlength="32" name="client-data-name" pattern="^[a-zA-ZА-Яа-яЁё\s\'-]+$" required>
+                  </div>
+                  <div class="steps__item__inputwrapper">
+                    <label for="client-data-phone">Телефон</label>
+                    <input class="steps__item__client-data" id="client-data-phone" type="tel" form="order-form" maxlength="14" name="client-data-phone" pattern="\+{0,1}[7|8]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+                  </div>
+                  <div class="steps__item__inputwrapper">
+                    <label for="client-data-email">E-mail</label>
+                    <input class="steps__item__client-data" id="client-data-email" type="email" form="order-form" maxlength="32" name="client-data-email" pattern="^[.a-z0-9_-]+@[а-яА-Яa-z0-9-]+\.[а-яА-Яa-zA-Z]{2,6}$" required>
+                  </div>
+                  <div class="steps__item__inputwrapper">
+                    <label for="client-data-location">Город</label>
+                    <input class="steps__item__client-data" id="client-data-location" type="text" form="order-form" maxlength="32" name="client-data-location" pattern="^[a-zA-ZА-Яа-яЁё\s\'-]+$" required>
+                  </div>
+                  <div class="steps__item__inputwrapper">
+                    <label for="client-data-address">Адрес доставки</label>
+                    <textarea class="steps__item__client-data" name="client-data-address" id="client-data-address" form="order-form"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="steps__item steps__item-2">
+                  <div class="steps__header">
+                    <h2 class="steps__title">Шаг 2. Выберите способ заказа</h2>
+                  </div>
+                  <div class="steps__delivery">
+                    <div class="steps__line steps__line-1">
+                      <div class="steps__img steps__img-delivery red"><img src="img/order/delivery-icon-1.png" alt="delivery"></div>
+                      <div class="steps__desc steps__desc-delivery">
+                        <h3>Доставка курьером</h3>
+                        <span>Доставка осуществляется в течение дня в удобное для вас время.</span>
+                      </div>
+                      <div class="steps__price"><span class="steps__price__count">500, 00</span><span class="steps__price__symbol">&#8381;</span></div>
+                    </div>
+                    <div class="steps__line steps__line-2">
+                      <div class="steps__img steps__img-delivery"><img src="img/order/delivery-icon-2.png" alt="delivery"></div>
+                      <div class="steps__desc steps__desc-delivery">
+                        <h3>Самовывоз</h3>
+                        <span>Вы можете самостоятельно забрать заказ из нашего магазина.</span>
+                      </div>
+                      <div class="steps__price"><span class="steps__price__count">Бесплатно</span><span class="steps__price__symbol"></span></div>
+                    </div>
+                    <div class="steps__line steps__line-3">
+                      <div class="steps__img steps__img-delivery"><img src="img/order/delivery-icon-3.png" alt="delivery"></div>
+                      <div class="steps__desc steps__desc-delivery">
+                        <h3>Почтой</h3>
+                        <span>Доставка почтой России</span>
+                      </div>
+                      <div class="steps__price"><span class="steps__price__count">500, 00</span><span class="steps__price__symbol">&#8381;</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="steps__item steps__item-3">
+                  <div class="steps__header">
+                    <h2 class="steps__title">Шаг 3. Выберите способ оплаты</h2>
+                  </div>
+                  <div class="steps__payment">
+                    <div class="steps__line steps__line-4">
+                      <div class="steps__img steps__img-payment red"><img src="img/order/payment-icon-1.png" alt="payment"></div>
+                      <div class="steps__desc steps__desc-payment">
+                        <h3>Наличными при получении</h3>
+                        <span>Оплата наличными при получении заказа курьеру.</span>
+                      </div>
+                    </div>
+                    <div class="steps__line steps__line-4">
+                      <div class="steps__img steps__img-payment"><img src="img/order/payment-icon-2.png" alt="payment"></div>
+                      <div class="steps__desc steps__desc-payment">
+                        <h3>Пластиковыми картами online</h3>
+                        <span>Оплачивайте покупки при помощи пластиковых карт</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="steps__item steps__item-4">
+                  <div class="steps__header">
+                    <h2 class="steps__title">Шаг 3. Проверьте товары в корзине</h2>
+                  </div>
+                  <div class="steps__tableset">
+                    <table class="steps__table">
+                      <thead class="steps__table__head">
+                        <tr class="steps__table__head__row">
+                          <th class="steps__table__head__cell">Наименование товара:</th>
+                          <th class="steps__table__head__cell">Цена</th>
+                          <th class="steps__table__head__cell">Скидка</th>
+                          <th class="steps__table__head__cell">Количество</th>
+                          <th class="steps__table__head__cell">Сумма</th>
+                          <th class="steps__table__head__cell"></th>
+                        </tr>
+                      </thead>
+                      <tfoot class="steps__table__footer">
+                        <tr class="steps__table__footer__row">
+                          <td class="steps__table__footer__cell">Доставка курьером</td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell">
+                            <span class="steps__table__footer__cell-count">500</span>
+                            <span class="steps__table__footer__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__footer__cell"></td>
+                        </tr>
+                        <tr class="steps__table__footer__row hidden">
+                          <td class="steps__table__footer__cell">Самовывоз</td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell">
+                            <span class="steps__table__footer__cell-count">Бесплатно</span>
+                          </td>
+                          <td class="steps__table__footer__cell"></td>
+                        </tr>
+                        <tr class="steps__table__footer__row hidden">
+                          <td class="steps__table__footer__cell">Почтой</td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell"></td>
+                          <td class="steps__table__footer__cell">
+                            <span class="steps__table__footer__cell-count">500</span>
+                            <span class="steps__table__footer__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__footer__cell"></td>
+                        </tr>
+                      </tfoot>
+                      <tbody class="steps__table__body">
+                        <tr class="steps__table__body__row">
+                          <td class="steps__table__body__cell">
+                            <p>Очищающий крем для лица</p>
+                            <span class="steps__table__body__cell-volume">Объем 10 мл.</span>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <span class="steps__table__body__cell-count">228</span>
+                            <span class="steps__table__body__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <span class="steps__table__body__cell-discount">12</span>
+                            <span class="steps__table__body__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <div class="steps__table__body__buttons">
+                              <div class="steps__table__body__buttons-minus"><i class="fas fa-minus"></i></div>
+                              <div class="steps__table__body__buttons-center">
+                                <input class="steps__table__body__counter" id="product-counter-1" name="product-counter-1" value="1" type="text" pattern="[0-9]{,2}" maxlength="2" required>
+                              </div>
+                              <div class="steps__table__body__buttons-plus"><i class="fas fa-plus"></i></div>
+                            </div>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <span class="steps__table__body__cell-total">228</span>
+                            <span class="steps__table__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__body__cell"><img src="img/delete.png" alt="delete"></td>
+                        </tr>
+                        <tr class="steps__table__body__row">
+                          <td class="steps__table__body__cell">
+                            <p>Очищающий крем для лица</p>
+                            <span class="steps__table__body__cell-volume">Объем 10 мл.</span>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <span class="steps__table__body__cell-count">228</span>
+                            <span class="steps__table__body__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <span class="steps__table__body__cell-discount">12</span>
+                            <span class="steps__table__body__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <div class="steps__table__body__buttons">
+                              <div class="steps__table__body__buttons-minus"><i class="fas fa-minus"></i></div>
+                              <div class="steps__table__body__buttons-center">
+                                <input class="steps__table__body__counter" id="product-counter-2" name="product-counter-2" value="1" type="text" pattern="[0-9]{,2}" maxlength="2" required>
+                              </div>
+                              <div class="steps__table__body__buttons-plus"><i class="fas fa-plus"></i></div>
+                            </div>
+                          </td>
+                          <td class="steps__table__body__cell">
+                            <span class="steps__table__body__cell-total">228</span>
+                            <span class="steps__table__cell-symbol">&#8381;</span>
+                          </td>
+                          <td class="steps__table__body__cell"><img src="img/delete.png" alt="delete"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="steps__summary">
+                      <p class="steps__total">
+                        <span class="steps__total__count">956</span>
+                        <span class="steps__total__symbol">&#8381;</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="steps__item steps__item-5">
+                  <div class="steps__header">
+                    <h2 class="steps__title">Шаг 4. Комментарий к заказу</h2>
+                  </div>
+                  <textarea class="steps__comment" name="client-data-comment" id="client-data-comment" form="order-form"></textarea>
+                </div>
+              </fieldset>
+              <div class="steps__controls">
+                <button class="button steps__button" type="submit" form="order-form">Оформить заказ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__wrap">
+          <div class="footer__address">
+            <span>г. Москва, ул. Яблочкова, д. 21а</span>
+            <span>ТЦ "Тимирязевский", 1 этаж</span>
+            <span><a href="tel:+74997555976">8 (499) 755-59-76</a></span>
+          </div>
+          <div class="footer__center">
+            <div class="footer__center__social">
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-vk"></i></div>
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-facebook-f"></i></div>
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-instagram"></i></div>
+            </div>
+            <div class="footer__center__copyright">
+              <span>Все права защищены законами РФ</span>
+              <span>© www.amelia.ru, 2009 - 2019</span>
+            </div>
+          </div>
+          <div class="footer__about">
+            <a href="#">О магазине</a>
+            <a href="#">Обратная связь</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script> <!--Popper JS-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> <!-- Bootstrap functionality-->
+  <script src="./js/order-form.js"></script>
+</body>
+</html>

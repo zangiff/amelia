@@ -1,0 +1,266 @@
+@import "vars"
+@import "header"
+
+.button
+  display: inline-block
+  color: white
+  background: $accent
+  text-transform: uppercase
+  font-family: "Open Sans", "Roboto", Arial, sans-serif
+  font-size: 13px
+  line-height: 21px
+  border: none
+  outline: none
+  cursor: pointer
+  &:active, &:focus
+    border: none
+    outline: none
+  &:hover
+    background: #999
+    color: white
+    border: 1px solid transparent
+
+.red
+  color: $accent
+  font-size: 18px
+
+.header, .main-nav, .footer, .address
+  @media only screen and(max-width: 495px)
+    width: 500px
+    margin: 0 auto
+
+.header
+  &__item
+    &-2
+      width: 30%
+    &-3
+      &-left
+        @media only screen and(max-width: 522px)
+          display: none
+      &-center
+        padding: 0 10px
+        font-weight: 400
+        font-size: 11px
+        padding-top: 5px
+        a
+          color: $accent
+          border-bottom: 1px dashed $accent
+        p
+          padding-top: 3px
+          color: #999
+      &-right
+        padding-left: 0
+        @media only screen and(max-width: 522px)
+          display: none
+
+
+.links
+  &__wrap
+    font-size: 15px
+    a
+      border-bottom: 1px solid $accent
+      color: $accent
+      margin-right: 20px
+    span
+      color: #999
+
+.product
+  &__wrap
+  &__header
+    padding: 35px 0 65px
+    display: grid
+    grid-template-columns: 1fr 2fr
+    grid-column-gap: 3.5%
+    @media only screen and(max-width: 773px)
+      grid-template-columns: 1fr
+      text-align: center
+    @media only screen and(max-width: 495px)
+      width: 500px
+  &__img
+    position: relative
+    &-cover
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 2
+      opacity: 0
+      transition: all .5s ease-in-out
+      &:hover
+        opacity: 1
+  &__title
+    font-weight: 500
+    font-size: 36px
+    @media only screen and(max-width: 773px)
+      padding: 30px 0 20px
+  &__text
+    font-size: 15px
+    line-height: 20px
+    text-align: justify
+    @media only screen and(max-width: 773px)
+      text-align: center
+  &__align
+    text-align: right
+  &__more
+    color: $accent !important
+    border-bottom: 1px solid transparent
+    text-transform: lowercase
+    &:hover
+      border-bottom: 1px solid $accent
+  &__filter
+    &__wrap
+      &-grid
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 3.5%
+        @media only screen and(max-width: 495px)
+          width: 500px
+        @media only screen and(max-width: 810px)
+          grid-template-columns: 1fr 1fr
+        @media only screen and(max-width: 520px)
+          grid-template-columns: 1fr
+    &__title
+      font-size: 16px
+      line-height: 21px
+      text-transform: uppercase
+    &__form
+      &__selectwrapper
+        position: relative
+        border: 1px solid transparent
+        &::after
+          display: block
+          font-family: "fontawesome"
+          content: "\f078"
+          padding: 6px
+          font-size: 16px
+          color: white
+          position: absolute
+          right: 5px
+          top: 48px
+          z-index: 1
+          text-align: center
+          width: 30px
+          height: 30px
+          background: $accent
+          pointer-events: none
+        &__title
+          padding: 15px 0 5px
+          font-weight: 300
+          font-size: 13px
+          line-height: 21px
+          text-transform: uppercase
+          &-last
+            font-size: 16px
+            padding-top: 30px
+    &__select
+      font-size: 16px
+      text-transform: uppercase
+      color: #999
+      width: 100%
+      height: 30px
+      padding: 5px 0 0 10px
+      border: 1px solid transparent
+      z-index: 2
+      outline: none
+      appearance: none
+      -moz-appearance: none
+      -webkit-appearance: none
+      &:hover
+        cursor: pointer
+        option
+          @media only screen and(max-width: 495px)
+            font-size: 12px
+          @media only screen and(max-width: 364px)
+            font-size: 10px
+    &__controls
+      padding: 30px 0 72px
+      width: 230px
+      margin: 0 auto
+      @media only screen and(max-width: 495px)
+        width: 500px
+    &__button
+      width: 100px
+      height: 35px
+      @media only screen and(max-width: 483px)
+        display: block
+        width: 200px
+        margin: 0 0 10px 30%
+      &-reset
+        color: $main-text-color
+        background: transparent
+        border: 1px solid $accent
+        margin-right: 20px
+  &__item
+    text-align: center
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-gap: 3.5%
+    grid-row-gap: 72px
+    padding-bottom: 85px
+    @media only screen and(max-width: 900px)
+      grid-template-columns: 1fr 1fr
+    @media only screen and(max-width: 571px)
+      grid-template-columns: 1fr
+    @media only screen and(max-width: 495px)
+      width: 500px
+    &__wrap
+      position: relative
+      transition: all .5s ease-out
+      &:hover
+        transform: scale(1.1)
+    &__content
+      padding: 35px 0 20px
+      &__desc
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        text-transform: uppercase
+      &__price
+        font-size: 28px
+        &-fullprice
+          font-weight: 300
+          color: #c93
+          text-decoration: line-through
+        &-discount
+          font-weight: 400
+    &__button
+      height: 45px
+      width: 140px
+      display: block
+      margin: 0 auto
+    &__discount
+      position: absolute
+      top: 0
+      left: 13px
+      padding-top: 12px
+      font-weight: 500
+      font-size: 30px
+      color: white
+      width: 70px
+      height: 70px
+      background: $accent
+      border-radius: 3px
+
+.address
+  background: url("../img/address-bg.jpg") no-repeat center top / cover
+  color: white
+  font-size: 17px
+  line-height: 24px
+  text-align: center
+  text-transform: uppercase
+  @media only screen and(max-width: 365.98px)
+    text-transform: none
+  &__container
+    padding: 60px 0
+  &__logo
+  &__paragraph
+    padding: 20px 20px 5px
+    span
+      display: block
+      color: $accent
+  &__data
+    padding-top: 15px
+    a
+      display: block
+      color: white
+
+@import "footer"

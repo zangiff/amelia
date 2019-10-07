@@ -1,0 +1,258 @@
+*
+  box-sizing: border-box
+
+html, body
+  font-family: 'Roboto', Arial, Tahoma, sans-serif
+  font-weight: 300
+  font-size: 14px
+  color: $main-text-color
+
+body
+  overflow-x: hidden
+
+body, ul, ol
+  margin: 0
+  padding: 0
+
+ul, ol
+  list-style: none
+
+input, textarea
+  outline: none
+  &:active
+    outline: none
+  &:focus
+    outline: none
+
+a
+  transition: all .2s ease-in
+  &:link
+    color: $main-text-color
+    text-decoration: none
+  &:active
+    color: $accent
+  &:visited
+    color: darken($main-text-color, 50%)
+
+img
+  max-width: 100%
+  height: auto
+  display: inline-block
+
+.container
+  max-width: 1000px
+  padding: 0
+  margin: 0 auto
+
+.hidden
+  display: none
+
+.invisible
+  opacity: 0
+
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+.d-block
+  display: block
+
+.d-inline-block
+  display: inline-block
+
+.w-100
+  width: 100%
+
+.main-title
+  font-weight: 700
+  font-size: 2.9rem
+  line-height: 2.9rem
+  text-transform: uppercase
+  text-align: center
+  @media only screen and(max-width: 1466.98px)
+    font-size: 1.8rem
+    line-height: 1.8rem
+  @media only screen and(max-width: 686.98px)
+    padding: 0 15%
+    font-size: 1.2rem
+  @media only screen and(max-width: 451.98px)
+    font-size: .8em
+    line-height: .8rem
+
+.after-title
+  font-weight: 300
+  font-size: 1.3rem
+  line-height: 1.8rem
+  text-align: center
+  padding: 15px 0
+  max-width: 36rem
+  margin: 0 auto 20px
+  @media only screen and(max-width: 1466.98px)
+    font-size: 1rem
+    line-height: 1.3rem
+  @media only screen and(max-width: 1226.98px)
+    margin: 0 auto
+  @media only screen and(max-width: 686.98px)
+    padding: 5px 15%
+    font-size: .7rem
+    line-height: 1rem
+  @media only screen and(max-width: 536.98px)
+    font-size: .5rem
+    line-height: .7rem
+  @media only screen and(max-width: 340.98px)
+    padding: 0 15%
+
+.header
+  &__nav
+    height: 33px
+    font-size: .95rem
+    text-transform: uppercase
+    line-height: 2.4rem
+    @media only screen and(max-width: 832.98px)
+      font-size: .7rem
+      line-height: 2rem
+    @media only screen and(max-width: 610.98px)
+      font-size: .5rem
+      line-height: 1.5rem
+    @media only screen and(max-width: 449.98px)
+      font-size: .4rem
+      line-height: 1rem
+  &__menu
+    width: 65%
+    float: left
+    @media only screen and(max-width: 610.98px)
+      width: 75%
+  &__list
+    display: flex
+    justify-content: space-between
+    &__item
+      font-weight: 400
+      a
+        &:hover
+          color: #f33
+  &__bookmark
+    width: 35%
+    margin-left: auto
+    text-align: right
+    @media only screen and(max-width: 610.98px)
+      width: 25%
+    a
+      color: #f33
+      i
+        color: #f33
+        cursor: pointer
+        margin-right: .7rem
+  &__main
+    padding: 15px 0
+    display: flex
+    justify-content: space-between
+  &__img
+    @media only screen and(max-width: 449.98px)
+      display: none
+  &__item
+    &-1
+      padding: 32px 0
+      display: flex
+    &-2
+      @media only screen and(max-width: 506.98px)
+        width: 34%
+      @media only screen and(max-width: 439.98px)
+        width: 42%
+      @media only screen and(max-width: 350.98px)
+        width: 46%
+    &-3
+      padding: 33px 0
+      display: flex
+      justify-content: flex-end
+      &-right
+        padding-left: 1.7rem
+      @media only screen and(max-width: 506.98px)
+        display: none
+  &__shedule
+    padding-left: 1.45rem
+    @media only screen and(max-width: 449.98px)
+      padding-left: 0
+  &__worktime
+    margin: 0
+    font-size: .95rem
+    line-height: 1.5rem
+    @media only screen and(max-width: 610.98px)
+      font-size: .65rem
+      line-height: 1rem
+    @media only screen and(max-width: 506.98px)
+      font-size: 1rem
+      line-height: 1.2rem
+      padding-top: 5px
+  &__phone
+    font-weight: normal
+    font-size: 1.3rem
+    line-height: 1.3rem
+    @media only screen and(max-width: 610.98px)
+      font-size: .9rem
+      line-height: .9rem
+    @media only screen and(max-width: 506.98px)
+      font-size: .1.3rem
+      line-height: 1.3rem
+
+.main-nav
+  padding-bottom: 20px
+  &__menu
+    font-weight: 500
+    font-size: 1.1rem
+    line-height: 1.5rem
+    text-transform: uppercase
+    padding: 20px 0 30px
+    @media only screen and(max-width: 767.98px)
+      font-size: .8rem
+      line-height: 1.2rem
+    @media only screen and(max-width: 511.98px)
+      font-size: .5rem
+      line-height: .75rem
+  &__list
+    display: flex
+    justify-content: space-between
+  &__item
+    a
+      &:hover
+        color: #f33
+  &__details
+    font-weight: 400
+    font-size: 1.1rem
+    display: flex
+    @media only screen and(max-width: 905.98px)
+      flex-flow: row wrap
+    @media only screen and(max-width: 767.98px)
+      font-size: .8rem
+    @media only screen and(max-width: 511.98px)
+      font-size: .6rem
+    &__item
+      a
+        &:hover
+          color: #f33
+    &__block
+      width: 21%
+      @media only screen and(max-width: 905.98px)
+        width: 33%
+        text-align: center
+        padding-bottom: 30px
+      &-1
+        width: 36%
+        padding-top: 20px
+        @media only screen and(max-width: 905.98px)
+          display: none
+    &__title
+      line-height: 1.55rem
+      text-transform: uppercase
+      @media only screen and(max-width: 767.98px)
+        font-size: 1rem
+        line-height: 1.3rem
+      @media only screen and(max-width: 511.98px)
+        font-size: .8rem
+        line-height: 1.1rem
+    &__list
+      line-height: 1.95rem
+      @media only screen and(max-width: 767.98px)
+        line-height: 1.4rem
+      @media only screen and(max-width: 511.98px)
+        line-height: 1.1rem

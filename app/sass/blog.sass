@@ -1,0 +1,101 @@
+@import "vars"
+@import "header"
+
+.cover
+  display: block
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  width: 480px
+  @media only screen and(max-width: 937px)
+    display: none
+
+.links
+  &__wrap
+    font-size: 15px
+    a
+      border-bottom: 1px solid $accent
+      color: $accent
+      margin-right: 20px
+    span
+      color: #999
+
+.blog
+  &__wrap
+    padding: 30px 0 50px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    grid-gap: 80px 40px
+    grid-template-areas: "i1 i2" "i3 i4" "i5 i6" "i7 i8"
+    @media only screen and(max-width: 937px)
+      grid-template-areas: "i1" "i2" "i4" "i3" "i5" "i6" "i8" "i7"
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      grid-row-gap: 40px
+      text-align: center
+  &__img
+    position: relative
+    &:first-child
+      grid-area: i1
+    &:nth-child(2)
+      grid-area: i4
+    &:nth-child(3)
+      grid-area: i5
+    &:last-child
+      grid-area: i8
+    // grid-area: img
+  &__content
+    &:first-child
+      grid-area: i2
+    &:nth-child(2)
+      grid-area: i3
+    &:nth-child(3)
+      grid-area: i6
+    &:last-child
+      grid-area: i7
+    // grid-area: content
+    &__title
+      font-weight: 500
+      font-size: 30px
+    &__text
+      font-size: 15px
+      line-height: 20px
+      @media only screen and(max-width: 937px)
+        padding: 0 20px
+    &__align
+      text-align: right
+      @media only screen and(max-width: 937px)
+        padding: 0 20px
+    &__more
+      color: $accent !important
+      border-bottom: 1px solid #f99
+  &__pagination
+    display: flex
+    justify-content: center
+    padding-bottom: 80px
+    &__arrow
+      width: 25px
+      height: 25px
+      background: $accent
+      text-align: center
+      padding-top: 3px
+      a
+        color: white
+    &__body
+      padding: 0 25px
+      font-size: 17px
+      line-height: 20px
+      padding-top: 3px
+    &__link
+      color: black
+      margin: 0 5px
+      &:nth-child(3)
+        color: $accent
+        text-decoration: underline
+      &:hover
+        color: $accent
+        text-decoration: underline
+
+@import "footer"

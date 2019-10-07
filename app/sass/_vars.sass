@@ -1,0 +1,26 @@
+$main-text-color: #333
+$accent: #f33
+
+=a-action
+  &:link
+    text-decoration: none
+    color: $main-text-color
+    border-bottom: 1px solid transparent
+  &:hover
+    text-decoration: none
+    color: #f33
+    border-bottom: 1px solid transparent
+  &:active
+    text-decoration: none
+    color: $accent
+    border-bottom: 1px solid $accent
+  &:visited
+    text-decoration: none
+    color: darken($main-text-color, 50%)
+    border-bottom: 1px solid transparent
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1

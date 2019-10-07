@@ -1,0 +1,73 @@
+@import "vars"
+@import "header"
+
+.header, .footer, .main-nav, .links, .orders
+  @media only screen and(max-width: 542px)
+    width: 542px
+
+.links
+  &__wrap
+    font-size: 15px
+    a
+      border-bottom: 1px solid $accent
+      color: $accent
+      margin-right: 20px
+    span
+      color: #999
+
+.red
+  color: $accent !important
+
+.orders
+  text-align: center
+  text-transform: uppercase
+  &__title
+    font-weight: 400
+    font-size: 26px
+    padding-top: 30px
+  &__wrap
+    padding-bottom: 90px
+  &__table
+    width: 60%
+    margin: 0 auto
+    border-collapse: collapse
+    &__head
+      font-size: 14px
+      line-height: 20px
+      color: #999
+      th
+        height: 40px
+        font-weight: 300
+        &:nth-child(2)
+          @media only screen and(max-width: 600px)
+            display: none
+        &:nth-child(5)
+          @media only screen and(max-width: 634px)
+            display: none
+    &__body
+      border: 1px solid #ccc
+      font-size: 17px
+      line-height: 20px
+      tr
+        border-bottom: 1px solid #ccc
+        td
+          font-weight: 400
+          height: 46px
+          padding: 0 5px
+          &:first-child
+            cursor: pointer
+            a
+              color: $accent
+            &:hover
+              a
+                text-decoration: underline
+          &:nth-child(2)
+            @media only screen and(max-width: 600px)
+              display: none
+          &:nth-child(5), &:last-child
+            cursor: pointer
+          &:nth-child(5)
+            @media only screen and(max-width: 634px)
+              display: none
+
+@import "footer"

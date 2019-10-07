@@ -1,0 +1,425 @@
+@import "vars"
+@import "header"
+
+.red
+  background: $accent !important
+
+.border-green
+  border: 1px solid green !important
+
+.button
+  color: white
+  background: $accent
+  text-transform: uppercase
+  font-family: "Open Sans", "Roboto", Arial, sans-serif
+  font-size: 16px
+  border: none
+  outline: none
+  cursor: pointer
+  transition: all .3s ease-in-out
+  &:active, &:focus
+    border: none
+    outline: none
+  &:hover
+    background: #0ff
+
+.modal
+  &-presets
+    width: 500px
+    height: 500px
+    margin: 15vh auto
+    background: white
+    @media only screen and(max-width: 555px)
+      width: 300px
+      height: 300px
+  &-content
+    height: 100%
+    background: #ccc
+  &-header
+    width: 100%
+    &-wrap
+      width: 100%
+  &-title
+    text-transform: uppercase
+    text-align: center
+    padding:  30px 20px 5px
+    color: #999
+    @media only screen and(max-width: 555px)
+      padding-top: 10px
+  button
+    border: none
+    outline: none
+  &-body
+    &-wrap
+      padding-top: 35px
+      @media only screen and(max-width: 555px)
+        padding-top: 10px
+    input
+      display: block
+      width: 400px
+      height: 50px
+      margin: 8px auto
+      text-align: center
+      @media only screen and(max-width: 555px)
+        width: 200px
+        height: 35px
+      &::placeholder
+        color: black
+        font-size: 18px
+        line-height: 30px
+        @media only screen and(max-width: 555px)
+          font-size: 14px
+          line-height: 22px
+    &-link
+      display: inline-block
+      color: $accent !important
+      font-size: 16px
+      border-bottom: 1px solid transparent
+      transition: all .3s ease-out
+      @media only screen and(max-width: 555px)
+        font-size: 12px
+      &:hover
+        border-bottom: 1px solid $accent
+      &-1
+        margin: 0 15px 0 35px
+    &-checkbox
+      margin: 15px 0
+      display: flex
+      cursor: pointer
+      @media only screen and(max-width: 555px)
+        margin: 5px 0
+    &-check
+      height: 16px
+      width: 16px
+      border: 1px solid #666
+      margin: 2px 15px 0 35px
+    &-highlight
+      height: 6px
+      width: 6px
+      background: transparent
+      margin: 3px 0 0 3px
+    &-desc
+      color: #666
+      @media only screen and(max-width: 555px)
+        font-size: 10px
+  &-footer
+    height: 30%
+    @media only screen and(max-width: 555px)
+      height: 100px
+      padding-top: 5px
+    &-button
+      height: 50px
+      width: 140px
+      display: block
+      @media only screen and(max-width: 555px)
+        height: 30px
+        font-size: 12px
+
+.first
+  background: #ccc
+  color: white
+  &__container
+    margin: 0 auto
+    width: 100%
+    position: relative
+    background: url("../img/prev-img.jpg") no-repeat left top / 14% auto, url("../img/next-img.jpg") no-repeat right top / 14% auto
+  &__content
+    position: absolute
+    top: 0
+    width: 100%
+    padding: 9rem 0
+    @media only screen and(max-width: 1799.98px)
+      padding: 6rem 0
+    @media only screen and(max-width: 1629.98px)
+      padding: 3rem 0
+    @media only screen and(max-width: 1122.98px)
+      padding: 2rem 0
+    @media only screen and(max-width: 451.98px)
+      padding: 1rem 0
+  &__line
+    width: 15%
+    border: 1px solid white
+    margin: 20px auto 5px
+    @media only screen and(max-width: 1122.98px)
+      margin: 15px auto 0
+    @media only screen and(max-width: 686.98px)
+      margin: 5px auto 0
+  &__button
+    display: block
+    margin: 0 auto
+    width: 135px
+    height: 35px
+    color: white !important
+    line-height: 33px
+    border: 2px solid #f33
+    text-align: center
+    text-transform: uppercase
+    @media only screen and(max-width: 999.98px)
+      width: 75px
+      height: 20px
+      text-transform: none
+      line-height: 16px
+      font-size: 10px
+    @media only screen and(max-width: 536.98px)
+      border: 2px solid transparent
+      font-size: .6rem
+      line-height: 12px
+      text-decoration: underline
+      height: 12px
+    &:hover
+      color: #f33 !important
+  &__carousel
+    &__wrap
+      margin: 0 auto
+      width: 72%
+//=========Bootstrap Carousel slider============
+.carousel-control-prev-icon
+  width: 18px
+  height: 40px
+  background: url("../img/prev-arrow.png") no-repeat right top
+.carousel-control-next-icon
+  width: 18px
+  height: 40px
+  background: url("../img/next-arrow.png") no-repeat left top
+.carousel-indicators
+  padding-bottom: 40px
+  @media only screen and(max-width: 999.98px)
+    display: none
+  li
+    width: 16px
+    height: 16px
+    background: transparent
+    border: 2px solid #ccc
+  &-mark
+    width: 10px
+    height: 10px
+    background-color: $accent
+    margin: 3px
+//===================Slider END================
+
+.brands
+  font-size: 1.2rem
+  line-height: 1.5rem
+  @media only screen and(max-width: 809.98px)
+    font-size: 1rem
+    line-height: 1.2rem
+  @media only screen and(max-width: 555.55px)
+    font-size: .7rem
+    line-height: .9rem
+  &__container
+    padding: 5rem 0 7rem
+    @media only screen and(max-width: 683.98px)
+      padding: 3rem 0 4rem
+  &__search
+    text-transform: uppercase
+    display: flex
+    justify-content: space-between
+    padding-bottom: 5rem
+    @media only screen and(max-width: 746.98px)
+      justify-content: center
+    @media only screen and(max-width: 683.98px)
+      padding-bottom: 3rem
+    &__dict
+      display: flex
+      max-width: 62%
+      @media only screen and(max-width: 746.98px)
+        max-width: 100%
+      &__key
+        padding: 10px .5rem 8px 0
+      &-item
+        display: inline-block
+        padding: 10px .6rem
+        color: $accent !important
+        @media only screen and(max-width: 998.98px)
+          padding: 10px .4rem
+        @media only screen and(max-width: 438.98px)
+          padding: 10px .2rem
+        &-last
+          text-transform: none
+      &__wrap
+        width: 150px
+        height: 150px
+        font-size: 1rem
+        line-height: 1.6rem
+        font-weight: 300
+        text-transform: none
+        left: -13px !important
+        @media only screen and(max-width: 809.98px)
+          font-size: .8rem
+          line-height: 1.4rem
+      &-inner
+        &:hover
+          color: $accent
+          cursor: pointer
+    &__select
+      width: 32%
+      padding: 6px 0 6px 6.75%
+      @media only screen and(max-width: 998.98px)
+        width: 40%
+      @media only screen and(max-width: 746.98px)
+        display: none
+      &-item
+        color: #999 !important
+        span
+          display: inline-block
+          width: 28px
+          height: 28px
+          background: $accent
+          color: white
+          position: relative
+          padding: 4px 0 0 6px
+          top: -2px
+          margin-left: 10px
+          @media only screen and(max-width: 809.98px)
+            width: 20px
+            height: 20px
+            top: 0
+            padding: 4px 0 0 4px
+      &__wrap
+        width: 200px
+        height: 170px
+        font-size: 1rem
+        line-height: 1.8rem
+        left: -20px !important
+        @media only screen and(max-width: 809.98px)
+          font-size: .8rem
+          line-height: 1.4rem
+      &-inner
+        &:hover
+          color: $accent
+  &__wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    @media only screen and(max-width: 959.98px)
+      justify-content: space-around
+    &__img
+      padding: 15px 0
+      @media only screen and(max-width: 999.98px)
+        padding: 10px 0
+      @media only screen and(max-width: 969.98px)
+        padding: 3px 5px 3px 0
+      @media only screen and(max-width: 959.98px)
+        padding-bottom: 30px
+        &-blanc
+          display: none
+  &__img
+    position: relative
+
+  &__controls
+    padding-top: 10px
+  &__button
+    display: block
+    width: 150px
+    height: 40px
+    background: $accent
+    color: white !important
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 14px
+    line-height: 40px
+    text-align: center
+    margin: 0 auto
+
+//===========Brands Template styles================
+.brands-template
+  width: 100%
+  height: 100%
+  line-height: 25px
+  position: absolute
+  top: 0
+  left: 0
+  background: rgba(0, 0, 0, .5)
+  padding: 15px 30px 10px
+  text-transform: lowercase
+  z-index: 2
+  &__direct
+    padding-left: 56%
+  &__item
+    a
+      color: white
+  &__link
+    display: block
+    position: relative
+    &:hover
+      color: $accent
+    i
+      display: block
+      position: absolute
+      top: 5px
+      right: 0
+    &-last
+      display: block
+      position: relative
+      &:hover
+        color: $accent
+      i
+        display: block
+        position: absolute
+        top: 6px
+        right: 150px
+  &__all
+    padding-top: 10px
+//===========Brands Template styles END============
+
+.offer
+  font-size: 10px
+  font-weight: 400
+  text-align: center
+  &__container
+    padding: 60px 0
+    @media only screen and(max-width: 683.98px)
+      padding: 0 0 60px
+  &__wrap
+    @media only screen and(max-width: 683.98px)
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+    @media only screen and(max-width: 423.98px)
+      justify-content: center
+  &__item
+    width: 17.2%
+    display: flex
+    margin-right: 3.5%
+    flex-direction: column
+    float: left
+    @media only screen and(max-width: 683.98px)
+      width: 40%
+      float: none
+      padding-bottom: 50px
+      @media only screen and(max-width: 423.98px)
+        width: 55%
+    &:last-child
+      margin-right: 0
+    &__title
+      min-height: 25px
+      h3
+        font-size: 11px
+        font-weight: 700
+        text-transform: uppercase
+        margin: 0
+
+.address
+  background: url("../img/address-bg.jpg") no-repeat center top / cover
+  color: white
+  font-size: 17px
+  line-height: 24px
+  text-align: center
+  text-transform: uppercase
+  @media only screen and(max-width: 365.98px)
+    text-transform: none
+  &__container
+    padding: 60px 0
+  &__logo
+  &__paragraph
+    padding: 20px 20px 5px
+    span
+      display: block
+      color: $accent
+  &__data
+    padding-top: 15px
+    a
+      display: block
+      color: white
+
+@import "footer"

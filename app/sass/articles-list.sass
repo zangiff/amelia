@@ -1,0 +1,111 @@
+@import "vars"
+@import "header"
+
+.cover
+  display: block
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  width: 220px
+  @media screen and(max-width: 600px)
+    display: none
+
+.links
+  &__wrap
+    font-size: 15px
+    a
+      border-bottom: 1px solid $accent
+      color: $accent
+      margin-right: 20px
+    span
+      color: #999
+
+.blog
+  &__line
+    padding: 30px 0 50px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 50px
+    @media screen and(max-width: 999px)
+      grid-template-columns: 1fr
+      grid-row-gap: 50px
+  &__item
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 25px
+    @media screen and(max-width: 999px)
+      grid-template-columns: 1fr 2fr
+    @media screen and(max-width: 587px)
+      grid-template-columns: 1fr 1fr
+    @media screen and(max-width: 600px)
+      grid-template-columns: 1fr
+  &__img
+    position: relative
+    @media screen and(max-width: 600px)
+      text-align: center
+  &__content
+    @media screen and(max-width: 600px)
+      padding-top: 30px
+    &__title
+      font-weight: 500
+      font-size: 17px
+      line-height: 20px
+      @media only screen and(max-width: 937px)
+        padding: 0 20px
+      @media screen and(max-width: 600px)
+        padding: 0 20px 0 0
+        text-align: center
+    &__text
+      font-size: 14px
+      line-height: 20px
+      @media only screen and(max-width: 937px)
+        padding: 0 20px
+      @media screen and(max-width: 600px)
+        padding: 0 20px 0 0
+        text-align: center
+    &__align-right
+      font-size: 15px
+      text-align: right
+      text-transform: lowercase
+      @media only screen and(max-width: 937px)
+        padding: 0 20px
+    &__more
+      color: $accent !important
+      border-bottom: 1px solid #f99
+    &__publicdate
+      color: #999
+      font-size: 13px
+      @media only screen and(max-width: 937px)
+        padding: 0 20px
+      @media screen and(max-width: 600px)
+        padding: 0 20px 0 0
+        text-align: right
+  &__pagination
+    display: flex
+    justify-content: center
+    padding-bottom: 80px
+    &__arrow
+      width: 25px
+      height: 25px
+      background: $accent
+      text-align: center
+      padding-top: 3px
+      a
+        color: white
+    &__body
+      padding: 0 25px
+      font-size: 17px
+      line-height: 20px
+      padding-top: 3px
+    &__link
+      color: black
+      margin: 0 5px
+      &:nth-child(3)
+        color: $accent
+        text-decoration: underline
+      &:hover
+        color: $accent
+        text-decoration: underline
+        
+@import "footer"

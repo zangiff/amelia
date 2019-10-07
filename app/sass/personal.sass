@@ -1,0 +1,53 @@
+@import "vars"
+@import "header"
+
+.header, .footer, .main-nav, .links, .personal
+  @media only screen and(max-width: 542px)
+    width: 542px
+
+.links
+  &__wrap
+    font-size: 15px
+    a
+      border-bottom: 1px solid $accent
+      color: $accent
+      margin-right: 20px
+    span
+      color: #999
+      
+.personal
+  text-align: center
+  &__wrap
+    padding: 30px 0 140px
+  &__title
+    font-weight: 400
+    font-size: 26px
+    text-transform: uppercase
+  &__desc
+    font-size: 15px
+    line-height: 22px
+    padding: 10px 10px 30px
+  &__button
+    display: block
+    height: 55px
+    width: 205px
+    border: 1px solid black
+    font-size: 18px
+    line-height: 55px
+    text-transform: uppercase
+    margin: 6px auto
+    transition: all .3s ease-in-out
+    &:hover
+      border-color: $accent
+      color: $accent
+
+
+
+
+
+
+
+
+
+
+@import "footer"

@@ -1,0 +1,68 @@
+.footer
+  line-height: 22px
+  @media only screen and(max-width: 784.98px)
+    font-size: 12px
+    line-height: 18px
+  @media only screen and(max-width: 672.98px)
+    font-size: 10px
+    line-height: 15px
+  @media only screen and(max-width: 425.98px)
+    font-size: 8px
+    line-height: 12px
+  &__container
+    padding: 40px 0
+    @media only screen and(max-width: 999.98px)
+      padding: 30px 20px
+    @media only screen and(max-width: 683.98px)
+      padding: 20px 20px 10px
+    @media only screen and(max-width: 569.98px)
+      padding: 20px 0 0
+  &__wrap
+    display: flex
+    justify-content: space-between
+  &__address
+    span
+      display: block
+      padding-bottom: 3px
+  &__center
+    &__social
+      display: flex
+      justify-content: center
+      text-align: center
+      &-icon
+        height: 35px
+        width: 35px
+        padding-top: 6.5px
+        border-radius: 5px
+        margin: 0 5px
+        cursor: pointer
+        &:hover
+          background: $accent
+          i
+           color: white
+        @media only screen and(max-width: 425.98px)
+          margin: 0 2px
+          &:hover
+            background: none
+            i
+              color: #cf0
+        i
+          color: #cc0
+          font-size: 15px
+          @media only screen and(max-width: 425.98px)
+            font-size: 10px
+    &__copyright
+      padding-top: 50px
+      @media only screen and(max-width: 999.98px)
+        padding-top: 35px
+      @media only screen and(max-width: 683.98px)
+        padding-top: 20px
+      @media only screen and(max-width: 569.98px)
+        display: none
+  &__about
+    text-align: right
+    a
+      display: block
+      text-transform: uppercase
+      font-weight: 500
+      padding-bottom: 5px

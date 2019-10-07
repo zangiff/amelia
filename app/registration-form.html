@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Amelia - интернет-магазин косметики</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/07659b6a35.js" crossorigin="anonymous"></script> <!-- FontAwesome JS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- Bootstrap functionality-->
+  <link rel="stylesheet" href="./css/registration-form.min.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="header">
+      <div class="container header__container">
+        <nav class="header__nav">
+          <div class="header__menu clearfix">
+            <ul class="header__list">
+              <li class="header__list__item"><a href="./map-location.html">Мир Amelia</a></li>
+              <li class="header__list__item"><a href="./registration-form.html">Контакты</a></li>
+              <li class="header__list__item"><a href="#">Оплата и доставка</a></li>
+              <li class="header__list__item"><a href="#">Словарь компонентов</a></li>
+              <li class="header__list__item"><a href="#">Блог</a></li>
+            </ul>
+          </div>
+          <div class="header__bookmark">
+            <a href="#"><i class="far fa-star"></i><span>В закладки</span></a>
+          </div>
+        </nav>
+        <div class="header__main">
+          <div class="header__item-1">
+            <div class="header__img">
+              <a href="#"><img src="img/icon-tel.png" alt="phone icon"></a>
+            </div>
+            <div class="header__shedule">
+              <p class="header__worktime">Пн.-Сб.: с 8:00 до 21:00</p>
+              <a class="header__phone" href="tel:+74997555976">8 (499) 755-59-76</a>
+            </div>
+          </div>
+          <div class="header__item-2">
+            <a href="./index.html"><img src="img/header-logo.png" alt="header logo"></a>
+          </div>
+          <div class="header__item-3">
+            <div class="header__item-3-left"><a href="#"><img src="img/header-icon-1.png" alt="girl"></a></div>
+            <div class="header__item-3-right"><a href="#"><img src="img/header-icon-2.png" alt="boy"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container main-nav__container">
+        <div class="main-nav__menu">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="./card-product.html">Лицо</a></li>
+            <li class="main-nav__item"><a href="./cream-product.html">Волосы</a></li>
+            <li class="main-nav__item"><a href="./product-cart.html">Тело</a></li>
+            <li class="main-nav__item"><a href="#">Парфюмерия</a></li>
+            <li class="main-nav__item"><a href="#">Мужчинам</a></li>
+            <li class="main-nav__item"><a href="#">БАД</a></li>
+            <li class="main-nav__item"><a href="#">Детям</a></li>
+            <li class="main-nav__item"><a href="#">Для дома</a></li>
+            <li class="main-nav__item"><a href="#">Подарки</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="links">
+      <div class="container">
+        <div class="links__wrap">
+          <a href="./index.html">Главная</a>
+          <span>Вход на сайт</span>
+        </div>
+      </div>
+    </section>
+    <section class="registration">
+      <div class="container">
+        <form action="/" method="POST" name="registration-form" id="registration-form">
+          <div class="registration__wrap">
+            <div class="registration__form">
+              <div class="registration__form__title">
+                <h1>Регистрация</h1>
+              </div>
+              <div class="registration__form__inputwrapper">
+                <input class="registration__form-input" value="" type="text" name="registration" id="registration-form-name" placeholder="Имя" maxlength="32">
+              </div>
+              <div class="registration__form__inputwrapper">
+                <input class="registration__form-input" value="" type="text" name="registration" id="registration-form-surname" placeholder="Фамилия" maxlength="32">
+              </div>
+              <div class="registration__form__inputwrapper">
+                <input class="registration__form-input" value="" type="password" name="registration" id="registration-form-password" placeholder="Пароль" maxlength="32" required>
+                <div class="registration__form-star registration__form-star-1"><span class="red">*</span></div>
+              </div>
+              <div class="registration__form__inputwrapper">
+                <input class="registration__form-input" value="" type="password" name="registration" id="registration-form-password-repeat" placeholder="Подтверждение пароля" maxlength="32" required>
+                <div class="registration__form-star registration__form-star-2"><span class="red">*</span></div>
+              </div>
+              <div class="registration__form__inputwrapper">
+                <input class="registration__form-input" value="" type="email" name="registration" id="registration-form-email" placeholder="E-mail" maxlength="32" required>
+                <div class="registration__form-star registration__form-star-3"><span class="red">*</span></div>
+              </div>
+              <div class="registration__form__captcha clearfix">
+                <div class="registration__form__captcha__title">
+                  <h2>Защита от автоматической регистрации:</h2>
+                </div>
+                <div class="registration__form__captcha-pics">
+                </div>
+                <div class="registration__form__captcha-input">
+                  <input id="registration-captcha" name="registration-captcha" type="text" pattern="/[0-9]{4}/" form="registration-form" maxlength="4" placeholder="Код с картинки" autocomplete="off">
+                </div>
+                <div class="registration__form__controls"><button class="button registration__form__button" type="submit" disabled>Регистрация</button></div>
+              </div>
+              <div class="registration__form__desc">
+                <p>Пароль должен быть не менее 6 символов длиной</p>
+                <p><span class="red">* </span>Обязательные поля</p>
+                <a href="#">Авторизация</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!--=========================================-->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__wrap">
+          <div class="footer__address">
+            <span>г. Москва, ул. Яблочкова, д. 21а</span>
+            <span>ТЦ "Тимирязевский", 1 этаж</span>
+            <span><a href="tel:+74997555976">8 (499) 755-59-76</a></span>
+          </div>
+          <div class="footer__center">
+            <div class="footer__center__social">
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-vk"></i></div>
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-facebook-f"></i></div>
+              <div class="footer__center__social-icon"><i class="brands-icons fab fa-instagram"></i></div>
+            </div>
+            <div class="footer__center__copyright">
+              <span>Все права защищены законами РФ</span>
+              <span>© www.amelia.ru, 2009 - 2019</span>
+            </div>
+          </div>
+          <div class="footer__about">
+            <a href="#">О магазине</a>
+            <a href="#">Обратная связь</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script> <!--Popper JS-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> <!-- Bootstrap functionality-->
+  <script src="./js/registration-form.js"></script>
+</body>
+</html>
